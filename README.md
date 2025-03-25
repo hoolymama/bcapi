@@ -13,17 +13,13 @@ You need to have python 3.11 or higher installed.
 
 Typically
 
-You need to create a .env file in the root of the project and add your Basecamp account ID, client ID, client secret, and redirect URI. Copy the .env.example file to get started. You'll find the client ID and secret in 1password under: **Basecamp Oauth App: ciobc**. You'll also find them on [our OAuth app page](https://launchpad.37signals.com/integrations/15032). You'll need to login with your Basecamp account of course.
+You need to create a .env file in the root of the project and add your Basecamp account ID, client ID, client secret, and redirect URI. Copy the .env.example file to get started. You'll find them on [your OAuth app page](https://launchpad.37signals.com/integrations/<your-app-id>). You'll need to login with your Basecamp account of course.
 
 ### Get a refresh token
 
 You also need a refresh token. To interact with Basecamp's API, you must provide an access token for every API request. Access tokens are set to expire after two weeks. 
 
-A refresh token allows you to automatically regenerate new access tokens. You only have to generate the refresh token once and after that you can use it to gain access to Basecamp each time you run your script.
-
-The refresh token is not in 1password since it is tied to your account. You must generate it and add it to your `.env` file.
-
-If you already have a Refresh token, skip this step.
+A refresh token allows you to automatically regenerate new access tokens. You only have to generate the refresh token once and after that you can use it to gain access to Basecamp each time you run your script. You must generate it and add it to your `.env` file. If you already have a Refresh token, skip this step.
 
 To begin the authentication process, use the `auth` script:
 
